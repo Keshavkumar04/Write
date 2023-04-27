@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>How a Programmer Fixed Slow Loading Times in GTA 5 Online</h1>
+
+    <div class="container">
+    <h2>Introduction: </h2>
+    <p> When Grand Theft Auto 5 was released in 2013, players fell in love with the game almost instantly. However, it took a long time for players to get into Grand Theft Auto Online. Seven years after its release, it was still slow to load, taking anywhere between three to 15 minutes to boot up, frustrating many players. A random programmer, known as Toast, took it upon themselves to investigate and fix the issue.  
+    </p>
+    <h2>Identifying the Problem: </h2>
+    <p>Toast noticed that it took six times longer to load GTA Online than the story mode, even though GTA Online used almost all the assets from the story mode, which was already loaded. This raised red flags as the CPU was using most of the assets to synchronize, and the graphics card, disk, and network were virtually unused. Toast suspected bad code lurking in the game.
+    </p>
+    <h3>Using Profiling Software: </h3>
+    <p>CPU profiling is a software that shows the programmer what functions are consuming the most and least percent of CPU time. It helps programmers optimize their code, and CPU profiler exists in almost all code editors or IDs. Toast used CPU profiling software to monitor what was being used to load the story mode. They noticed that after the first minute, the CPU was being used for four minutes on a single core and doing nothing else.
+    </p>
+    <h3>Stock Sampling: </h3>
+    <p>Since Toast did not have access to the source code, they used a stock sampling technique called CPU sampling. This method takes snapshots of what is running at a set time and creates a calling tree so that the programmer can see how long something takes, as well as its following function. Toast used a stock sampling software called Luke Stack Walker to identify two bottlenecks, one with 55% and the other with 45%.
+    </p>
+    <h2>Fixing the Problem</h2>
+    <p>After identifying the bottleneck in the code using CPU profiling and stack sampling, the programmer discovered that the issue was related to a JSON file that was being loaded during the boot-up process of the game. JSON stands for JavaScript Object Notation, and it is a lightweight data interchange format used to transmit data between a client and a server.
+    </p>
+    <p>The problematic JSON file contained a large amount of data that was being parsed every time the game was launched, causing the bottleneck that led to the slow loading times. The programmer then made some changes to the code to optimize the loading of this JSON file, specifically by pre-loading the data into memory so that it didn't need to be parsed every time the game was launched.
+    </p>
+    <p>After implementing this optimization, the programmer was able to significantly reduce the loading times for GTA 5 online, bringing them down to just a few seconds instead of several minutes. The solution was then shared with the community, allowing other players to also benefit from the fix and enjoy a smoother gaming experience.
+    </p>
+
+    <h2>Conclusion: </h2>
+    <p>The use of CPU profiling, stack sampling, and optimization techniques helped Toast identify and resolve the issue with slow loading times in GTA 5 online. This demonstrates the importance of effective software debugging and optimization in developing high-performance applications. Toast's fix not only improved the game's performance but also benefited the community of players who had been struggling with slow loading times for years.
+    </p>
+</div>
+</body>
+</html>

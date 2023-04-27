@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Instagram's Optimization Strategy to Avoid Server Crash and Improve Video Quality</h1>
+<div class="container">
+    <h2>Introduction</h2>
+    <p>Instagram faced a challenge with storing billions of pictures and videos while keeping up with the constant traffic. This article explores how Instagram optimized its servers to avoid a server crash and improve video quality.
+    </p>
+
+    <h2>The Problem</h2>
+    <p>Instagram projected their usage within 12 months and realized that they would not have enough computing capacity to provide video uploads for everyone. A 10-minute downtime is considered a disaster. The solution was to optimize the servers they were running rather than getting new ones.
+    </p>
+
+    <h2>Optimization Method</h2>
+    <p>Instagram's engineers developed a method to process new videos that reduces the cost to produce basic video encodings by 94%. With this method, Meta's video infrastructure can continue to scale without requiring more machines. This helps free up resources so more people can watch advanced encodings, providing clearer video that plays more smoothly, which is especially beneficial for people in countries with slower internet connections.
+    </p>
+
+    <h3>Video Encoding</h3>
+    <p>To achieve this, Instagram creates two types of video encoding for each video uploaded to the platform. Minimum functionality encodings, which are compatible with all Instagram clients, and advanced encodings that use newer compression technologies for higher-quality playback. The problem was that Instagram was spending more than 80% of their resources processing minimum functionality encodings. If they stayed on that trajectory, it would monopolize their resources within a year. The solution was to remove redundant workloads by replacing basic adaptive bit rate (ABR) encodings with progressive encodings' video frames by repackaging them into an ABR-capable file structure.
+    </p>
+
+    <h3>Testing Framework</h3>
+    <p>Instagram needed to prove this theory before shipping to production, so they built a testing framework that replicated a small percentage of traffic across a test pool and a control pool of equal processing power. They saved the encodings from each pool to different namespaces so they could later identify them as part of the control or test catalog of videos. They proved that although they were degrading the compression efficiency of the basic ABR encodings in the test pool, the higher watch time for advanced encodings more than made up for it.
+    </p>
+
+    <h3>Video Types</h3>
+    <p>Instagram generates two types of video codecs: H264 and AV1. H264 is an older video compression system that works by analyzing the difference between the next frame and the last frame, removing things that are the same to save memory. It also removes any information that is unnecessary in a frame and stores it more efficiently. On the other hand, AV1 is a newer compression system that can outperform H264. It can achieve 30% smaller file sizes and better quality while being open-source and royalty-free.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>Instagram optimized its servers to avoid a server crash by compressing files into multiple videos depending on the view and generating two video codecs: H264 and AV1. With this optimization, Instagram was able to make a 94% improvement to the process of storing videos, saving them from having a massive server crash. Additionally, they were able to provide higher-quality video playback while saving resources, which is especially beneficial for people in countries with slower internet connections.</p>
+</div>
+</body>
+</html>

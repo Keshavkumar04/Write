@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0;
+    text-align: justify;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  li{
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0;
+    text-align: justify;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+ 
